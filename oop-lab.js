@@ -29,18 +29,34 @@
 
 
 
-// backupAccount
-
-
-
-
-
-
 
 
 // PUT RECORD ALBUMS CODE HERE
 
+class RecordAlbums {
+    constructor(artistName, albumName, songs, currentSong) {
+        this.artistName = artistName
+        this.albumName = albumName
+        this.songs = songs
+        this.currentSong = this.songs(currentSong)
+    }
+    //prints out its result
+    nextSong() {
+        console.log(this.songs[this.songs.indexOf(this.currentSong) + 1])
 
+    }
+    //prints out its result
+    previousSong() {
+        console.log(this.songs[this.songs.indexOf(this.currentSong) - 1])
+    }
+    get artistName() {
+        return this.artistName;
+    }
+
+    set artistName(newName) {
+        this.artistName = newName;   // validation could be checked here such as only allowing non numerical values
+    }
+}
 
 
 
