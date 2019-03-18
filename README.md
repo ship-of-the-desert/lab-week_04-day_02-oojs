@@ -1,5 +1,16 @@
 # Javascript OOP Lab
 
+
+There are three OOP class exercises in this lab:  
+
+- ATM
+- Record Albums
+- Geometry
+
+You can work on your code in the `oop-lab.js` file and test your code in the browser console with `index.html`. You can put all of your code in the same `oop-lab.js` file, but you may want to comment out your `console.logs` before moving to the next section.
+
+<br>
+
 ## Make an ATM
 
 For this exercise you will be creating an ATM class.
@@ -30,7 +41,7 @@ Give the `Atm` class a `backupAccount` property that can, optionally, contain a 
 <br>
 
 
-## Create a `RecordAlbums` Class
+## Create a RecordAlbums Class
 
 It should have the following properties...
 
