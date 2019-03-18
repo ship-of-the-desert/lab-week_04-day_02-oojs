@@ -1,7 +1,7 @@
 # Javascript OOP Lab
 
 
-There are three OOP class exercises in this lab:  
+Please fork and clone this repo. Submit a Pull Request when you're done. There are three OOP class exercises in this lab:  
 
 - ATM
 - Record Albums
