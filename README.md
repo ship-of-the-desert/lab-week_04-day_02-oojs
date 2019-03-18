@@ -35,9 +35,6 @@ Give the `Atm` class a `backupAccount` property that can, optionally, contain a 
 - Whenever an ATM's balance goes below zero, it will remove money from the instance stored in `backupAccount` so that its balance goes back to zero.
 - This should trigger a withdrawal in the back up account equal to the amount of money that was withdrawn from the original account.
 
-> 15 minutes exercise. 5 minutes review.
-
-
 <br>
 
 
@@ -82,8 +79,6 @@ Augment the class with the following methods...
 * `perimeter` - calculates the perimeter of the rectangle.
 
 Create a few rectangles with different lengths and widths.
-
-**Bonus**: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
 
 ### Triangle
