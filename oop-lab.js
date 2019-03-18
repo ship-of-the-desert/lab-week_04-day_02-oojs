@@ -62,4 +62,28 @@ previousSong(){
 let song=new RecordAlbums("A","bb",['aa','bb','cc','dd'],"bb")
 song.nextSong();
 song.previousSong();
+
+
 // PUT GEOMETRY CODE HERE
+class Geometry{
+constructor(length,width){
+    this.length=length;
+    this.width=width;
+}
+
+isSquare(){
+console.log("is Square"+(this.length==this.width));{ 
+}
+}
+area(){
+console.log("Area:"+this.length*this.width)
+}
+perimeter(){
+    console.log("Perimeter:"+(this.length+this.width+this.length+this.width))
+    }
+}
+let rectangle=new Geometry(3,5);
+rectangle.isSquare();
+rectangle.area();
+rectangle.perimeter();
+
