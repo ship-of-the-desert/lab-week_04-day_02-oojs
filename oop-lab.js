@@ -51,21 +51,36 @@ lamyaa.transactionHistory();
 
 
 class RecordAlbums{
-    constructor(artistName, albumName, songs, currentSong){
+    constructor(artistName, albumName, songs , currentSong){
         this.artistName=artistName;
         this.albumName=albumName;
         this.songs=songs;
         this.currentSong=currentSong;
     }
+    nextSong(){
+        var i=this.songs.indexOf(this.currentSong);
+        console.log(this.songs[i+1]);
+    }
+    previousSong(){
+        var i=this.songs.indexOf(this.currentSong);
+        console.log(this.songs[i-1]);
+    }
 }
 
 
 
+var fav1 = new RecordAlbums("Rihanna", "Loud",['S&m', 'cheers','fading','only girl'],"cheers");
 
-
-
-
+fav1.nextSong();
+fav1.previousSong();
 
 
 
 // PUT GEOMETRY CODE HERE
+
+
+
+
+
+
+
