@@ -33,6 +33,7 @@ class Atm {
     console.log(`Balance: ${this.money}`);
   }
 }
+console.log(".....ATM.....");
 let newAccount = new Atm("checking", 60);
 newAccount.deposit(100);
 newAccount.withdraw(2);
@@ -48,28 +49,27 @@ class RecordAlbums {
   }
   nextSong() {
     let next = this.songs[this.songs.indexOf(this.currentSong) + 1];
-    console.log(next);
+    console.log(`Next:${next}`);
     // this.songs.find(function(currentSong) {
     //     return currentSong;
     //   });
   }
   previousSong() {
     let previous = this.songs[this.songs.indexOf(this.currentSong) - 1];
-    console.log(previous);
+    console.log(`Previous:${previous}`);
   }
 }
-
+console.log(".....RecordAlbums.....");
 let song = new RecordAlbums("A", "bb", ["aa", "bb", "cc", "dd"], "bb");
 song.nextSong();
 song.previousSong();
-
+//.......................................
 // PUT GEOMETRY CODE HERE
 class Geometry {
   constructor(length, width) {
     this.length = length;
     this.width = width;
   }
-
   isSquare() {
     console.log("is Square " + (this.length == this.width));
     {
@@ -84,10 +84,12 @@ class Geometry {
     );
   }
 }
+console.log(".....Rectangle.....");
 let rectangle = new Geometry(3, 5);
 rectangle.isSquare();
 rectangle.area();
 rectangle.perimeter();
+//.......................................
 
 class Triangle {
   constructor(sideA, sideB, sideC) {
@@ -96,21 +98,36 @@ class Triangle {
     this.sideC = sideC;
   }
   isEquilateral() {
-      return(this.sideA==this.sideB==this.sideC)
+    console.log (`isEquilateral: ${this.sideA == this.sideB== this.sideC}`);
   }
-  c() {
-    return(this.sideA==this.sideC ||this.sideA==this.sideB || this.sideB==this.sideC )  
+  isIsosceles() {
+    console.log (`isIsosceles: ${this.sideA == this.sideC ||this.sideA == this.sideB ||this.sideB == this.sideC}`);
   }
   area() {
-    return(0.5*sideA*sideB)
+    console.log(`Triangle area:${0.5 * this.sideA * this.sideB}`);
   }
   isObtuse() {
-    return(!isEquilateral()&& !isEquilateral())
+    console.log(`isObtuse: ${!this.isEquilateral() && !this.isEquilateral()}`);
   }
 }
-
-class LineSegment{
-  constructor(x1,y1,x2,y2){
-    
+console.log(".....Triangle.....");
+let triangle=new Triangle(3,4,6);
+triangle.isEquilateral();
+triangle.isIsosceles();
+triangle.area();
+triangle.isObtuse();
+//.......................................
+class LineSegment {
+  constructor(x1, y1, x2, y2) {
+    this.x1 = x1;
+    this.y1 = y1;
+    this.x2 = x2;
+    this.y2 = y2;
+  }
+  length() {
+    console.log(`length ${Math.sqrt(Math.pow(this.x2 - this.x1, 2) + Math.pow(this.y2 - this.y1, 2))}`);
   }
 }
+console.log(".....LineSegment.....");
+let line = new LineSegment(2, 3, 5, 4);
+line.length();
