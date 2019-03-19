@@ -40,50 +40,77 @@ newAccount.showBalance();
 
 // PUT RECORD ALBUMS CODE HERE
 class RecordAlbums {
-  constructor(artistName,albumName,songs,currentSong) {
+  constructor(artistName, albumName, songs, currentSong) {
     this.artistName = artistName;
     this.albumName = albumName;
     this.songs = songs;
     this.currentSong = currentSong;
   }
-  nextSong(){
-     let next=this.songs[(this.songs.indexOf(this.currentSong))+1];
-     console.log(next);
+  nextSong() {
+    let next = this.songs[this.songs.indexOf(this.currentSong) + 1];
+    console.log(next);
     // this.songs.find(function(currentSong) {
     //     return currentSong;
     //   });
   }
-previousSong(){
-    let previous=this.songs[(this.songs.indexOf(this.currentSong))-1];
+  previousSong() {
+    let previous = this.songs[this.songs.indexOf(this.currentSong) - 1];
     console.log(previous);
-}
+  }
 }
 
-let song=new RecordAlbums("A","bb",['aa','bb','cc','dd'],"bb")
+let song = new RecordAlbums("A", "bb", ["aa", "bb", "cc", "dd"], "bb");
 song.nextSong();
 song.previousSong();
 
-
 // PUT GEOMETRY CODE HERE
-class Geometry{
-constructor(length,width){
-    this.length=length;
-    this.width=width;
-}
+class Geometry {
+  constructor(length, width) {
+    this.length = length;
+    this.width = width;
+  }
 
-isSquare(){
-console.log("is Square"+(this.length==this.width));{ 
-}
-}
-area(){
-console.log("Area:"+this.length*this.width)
-}
-perimeter(){
-    console.log("Perimeter:"+(this.length+this.width+this.length+this.width))
+  isSquare() {
+    console.log("is Square " + (this.length == this.width));
+    {
     }
+  }
+  area() {
+    console.log("Area:" + this.length * this.width);
+  }
+  perimeter() {
+    console.log(
+      "Perimeter:" + (this.length + this.width + this.length + this.width)
+    );
+  }
 }
-let rectangle=new Geometry(3,5);
+let rectangle = new Geometry(3, 5);
 rectangle.isSquare();
 rectangle.area();
 rectangle.perimeter();
 
+class Triangle {
+  constructor(sideA, sideB, sideC) {
+    this.sideA = sideA;
+    this.sideB = sideB;
+    this.sideC = sideC;
+  }
+  isEquilateral() {
+      return(this.sideA==this.sideB==this.sideC)
+  }
+  c() {
+    return(this.sideA==this.sideC ||this.sideA==this.sideB || this.sideB==this.sideC )  
+  }
+  area() {
+    return(0.5*sideA*sideB)
+  }
+  isObtuse() {
+    return(!isEquilateral()&& !isEquilateral())
+  }
+}
+
+class LineSegment{
+  constructor(x1,y1,x2,y2){
+    
+  }
+}
