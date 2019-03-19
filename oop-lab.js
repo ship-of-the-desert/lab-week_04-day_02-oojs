@@ -35,6 +35,7 @@ class Atm {
 }
 console.log(".....ATM.....");
 let newAccount = new Atm("checking", 60);
+console.log(newAccount)
 newAccount.deposit(100);
 newAccount.withdraw(2);
 newAccount.showBalance();
@@ -60,7 +61,8 @@ class RecordAlbums {
   }
 }
 console.log(".....RecordAlbums.....");
-let song = new RecordAlbums("A", "bb", ["aa", "bb", "cc", "dd"], "bb");
+let song = new RecordAlbums("Adele", "21", ["Rolling in the Deep", "Someone Like You ", "One and Only", "Set Fire to the Rain"], "Someone Like You ");
+console.log(`Current:${song.currentSong}`);
 song.nextSong();
 song.previousSong();
 //.......................................
@@ -86,6 +88,7 @@ class Geometry {
 }
 console.log(".....Rectangle.....");
 let rectangle = new Geometry(3, 5);
+console.log(rectangle);
 rectangle.isSquare();
 rectangle.area();
 rectangle.perimeter();
@@ -112,6 +115,7 @@ class Triangle {
 }
 console.log(".....Triangle.....");
 let triangle=new Triangle(3,4,6);
+console.log(triangle)
 triangle.isEquilateral();
 triangle.isIsosceles();
 triangle.area();
@@ -130,4 +134,5 @@ class LineSegment {
 }
 console.log(".....LineSegment.....");
 let line = new LineSegment(2, 3, 5, 4);
+console.log(line)
 line.length();
